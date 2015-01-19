@@ -1246,7 +1246,8 @@ var Path = PathItem.extend(/** @lends Path# */{
                 // reversing of path direction, which would mess with segments!
                 path.insertAbove(this, true);
                 // Use _clone to copy over all other attributes, including style
-                this._clone(path);
+
+                path = this._clone(new paper[this._class]().insertAbove(this, true));
             }
             path._add(segs, 0);
             // Add dividing segment again. In case of a closed path, that's the
